@@ -9,22 +9,32 @@ function wash(resolve){
 function hang(clothes){
     console.log('start 2');
     /*...晾衣服中...*/
-    console.log('2 finished!');
+    setTimeout(()=>{
+        console.log('2 finished!');
+    }, 3000);
+    
     return '2 finished product.';
 }
 
 function dry(clothes){
     console.log('start 3');
     /*...晾干中...*/
-    console.log('3 finished!');
+    setTimeout(()=>{
+        console.log('3 finished!');
+    }, 3000)
+    
     return '3 finished product';
 }
 
 function pickup(clothes){
     console.log('4 finished!');
     /*...收衣服中...*/
-    console.log('4 finished product.');
+    setTimeout(()=>{
+        console.log('4 finished product.');
+    }, 3000)
+    
 }
 
 var promise = new Promise(wash);
 promise.then(hang).then(dry).then(pickup);
+
